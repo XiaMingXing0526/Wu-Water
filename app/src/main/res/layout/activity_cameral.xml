@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <Button
+        android:id="@+id/btn_pick_image"
+        style="@android:style/Widget.Button"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:onClick="doClick"
+        android:layout_gravity="top"
+        android:text="选取已拍摄影像" />
+
+
+    <Button
+        android:id="@+id/btn_open_camera_for_video"
+        style="@android:style/Widget.Button"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:onClick="doClick"
+        android:text="开始录像" />
+
+
+    <ImageView
+        android:id="@+id/iv"
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:scaleType="fitCenter" />
+
+
+    <VideoView
+        android:id="@+id/video"
+        android:layout_width="match_parent"
+        android:layout_height="200dp" />
+
+
+    <Button
+        android:id="@+id/btn_uploading"
+        style="@android:style/Widget.Button"
+        android:layout_width="match_parent"
+        android:layout_height="72dp"
+        android:layout_gravity="bottom"
+        android:onClick="doClick"
+        android:text="上传测流" />
+
+
+</LinearLayout>
+

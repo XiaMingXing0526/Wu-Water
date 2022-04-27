@@ -1,0 +1,52 @@
+plugins {
+    id 'com.android.application'
+
+    //apply plugin，声明是Android应用程序
+}
+
+android {
+    compileSdkVersion 30
+
+    buildToolsVersion "30.0.3"
+    //defaultConfig闭包：默认配置，应用程序包名，最小 sdk 版本，目标 sdk 版本，版本号，版本名
+    //
+    //buildTypes闭包：指定生成安装文件的配置，是否对代码进行混淆
+    //
+    //compileOptions闭包：指定编译的java版本
+
+    defaultConfig {
+        applicationId "com.example.myapplication"
+        minSdkVersion 16
+        targetSdkVersion 30
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+// dependencies 闭包，指定当前项目的所有依赖关系，本地依赖，库依赖以及远程依赖
+
+
+dependencies {
+
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'com.google.android.material:material:1.1.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    implementation 'androidx.navigation:navigation-fragment:2.2.2'
+    implementation 'androidx.navigation:navigation-ui:2.2.2'
+    testImplementation 'junit:junit:4.+'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+}
